@@ -1,0 +1,20 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore.Migrations;
+
+namespace Sandwich_Way.Models
+{
+    public class CategoryRepository : ICategoryRepository
+    {
+        private readonly AppDbContext _appDbContext;
+
+        public CategoryRepository(AppDbContext appDbContext)
+        {
+            _appDbContext = appDbContext;
+        }
+
+        public IEnumerable<Category> GetAllCategories => _appDbContext.Categories;
+    }
+}

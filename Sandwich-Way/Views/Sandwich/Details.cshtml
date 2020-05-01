@@ -1,0 +1,20 @@
+﻿@model Sandwiches
+
+<h1>@Model.SandwichName</h1>
+
+<div class="thumbnail">
+    <img alt="@Model.SandwichName" src="@Model.ImageUrl" />
+    <div class="caption-full">
+        <h3 class="pull-right">@Model.Price</h3>
+        <h3><a href="#">@Model.SandwichName</a></h3>
+        <p>@Model.Description</p>
+    </div>
+    <div class="addToCart">
+        <p class="button">
+            <a class="btn btn-primary"
+               asp-controller="ShoppingCart"
+               asp-action="AddToShoppingCart"
+               asp-route-sandwichId="@Model.SandwichId">Add to Cart</a>
+        </p>
+    </div>
+</div>
