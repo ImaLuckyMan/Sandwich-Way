@@ -40,7 +40,7 @@ namespace Sandwich_Way.Models
 
         [Required(ErrorMessage = "Please enter your Zip Code")]
         [Display(Name = "Zip Code")]
-        [StringLength(12, MinimumLength = 8)]
+        [StringLength(10, MinimumLength = 5)]
         public string ZipCode { get; set; }
 
 
