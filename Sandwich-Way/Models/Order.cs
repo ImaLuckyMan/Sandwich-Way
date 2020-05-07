@@ -17,6 +17,7 @@ namespace Sandwich_Way.Models
         public string PhoneNumber { get; set; }
 
         public List <OrderDetail> OrderDetails { get; set; }
+
         public decimal OrderTotal { get; set; }
         public DateTime OrderPlaced { get; set; }
     }

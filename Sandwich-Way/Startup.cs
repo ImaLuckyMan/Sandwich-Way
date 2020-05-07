@@ -32,6 +32,7 @@ namespace Sandwich_Way
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<ISandwichRepository, SandwichRepository>();
             services.AddScoped<ShoppingCart>(sc => ShoppingCart.GetCart(sc));
+            services.AddScoped<IOrderRepository, OrderRepository>();
 
             services.AddHttpContextAccessor();
             services.AddSession();
