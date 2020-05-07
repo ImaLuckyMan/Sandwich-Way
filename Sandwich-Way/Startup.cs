@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -28,6 +29,8 @@ namespace Sandwich_Way
         {
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
+            services.AddDefaultIdentity<IdentityUser>().AddEntityFrameworkStores<AppDbContext>();
+
             services.AddControllersWithViews();
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<ISandwichRepository, SandwichRepository>();
@@ -36,6 +39,7 @@ namespace Sandwich_Way
 
             services.AddHttpContextAccessor();
             services.AddSession();
+            services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -50,6 +54,8 @@ namespace Sandwich_Way
             app.UseSession();
 
             app.UseRouting();
+            app.UseAuthentication();
+
 
             app.UseEndpoints(endpoints =>
             {
@@ -57,6 +63,8 @@ namespace Sandwich_Way
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}"
                     );
+
+                endpoints.MapRazorPages();
             });
         }
     }
