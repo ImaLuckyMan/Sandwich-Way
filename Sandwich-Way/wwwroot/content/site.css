@@ -7,11 +7,11 @@
 
 
 .slide-image {
-    width: 100%;
+    width: 20%;
 }
 
 .carousel-holder {
-    margin-bottom: 30px;
+    margin-bottom: 30%;
 }
 
 .carousel-control,
@@ -20,7 +20,7 @@
 }
 
 .caption {
-    height: 130px;
+    height: 20%;
     overflow: hidden;
 }
 
@@ -29,12 +29,12 @@
 }
 
 .thumbnail img {
-    width: 100%;
+    width: 20%;
 }
 
 .addToCart {
-    padding-right: 10px;
-    padding-left: 10px;
+    padding-right: 10%;
+    padding-left: 10%;
 }
 
 .thumbnail {
@@ -47,19 +47,19 @@
 }
 
 footer {
-    margin: 50px 0;
+    margin: 10% 0;
 }
 
-.navbar {
+/*.navbar {
     background-image: none;
 }
 
 .navbar-inverse {
     background-color: #a593c2;
     border-color: #a593c2;
-}
+}*/
 
-.nav.navbar-nav.navbar-right li a {
+/*.nav.navbar-nav.navbar-right li a {
     color: white;
     font-size: 1.2em;
 }
@@ -68,17 +68,17 @@ footer {
     font-size: 1.2em;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
     color: white;
-}
+}*/
 
 .carousel .item {
-    height: 400px;
+    height: 20%;
 }
 
 .item img {
     position: absolute;
     top: 0;
     left: 0;
-    min-height: 400px;
+    min-height: 20%;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
