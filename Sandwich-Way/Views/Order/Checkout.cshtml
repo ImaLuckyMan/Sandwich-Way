@@ -39,8 +39,15 @@
         </div>
 
         <div class="form-group">
-             <div class="col-md-offset-5">
-                 <input type="submit" class="btn btn-primary" value="Complete Order" />
-             </div>
+            <label asp-for="PhoneNumber" class="col-md-2 control-label"></label>
+            <div class="col-md-5">
+                <input asp-for="PhoneNumber" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-5">
+                <input type="submit" class="btn btn-primary" value="Complete Order" />
+            </div>
         </div>
     </form>
